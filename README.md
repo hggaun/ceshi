@@ -18,3 +18,30 @@
     删除远程库            git remote rm origin(远程库名)
 克隆远程库
     git clone  远程库的地址  http/ssh
+创建分支  
+    git checkout -b 分支名      -b表示创建并切换  等同于 git branch 分支名 和 git checkout 分支名  2个命令             git swtich -c dev  
+查看分支    
+    git branch   当前分支前会标一个 * 号
+切换分支
+    git checkout 分支名                     git switch 分支名 
+合并分支
+    当前分支  master
+    git merge  dev (分支名)   其代码表示 将dev分支合并到master分支上   在合并之前要将分支切换到 master上
+删除分支
+    git branch -d dev
+分支合并图
+    git log --graph
+fast forward模式
+    禁用fast forward模式 git就就会在merge时生成一个新的commit 就可以在分支历史上看出分支信息
+    git merge  --no-ff  -m "commit修饰信息" 分支名
+分支合并冲突  
+    多个分支都进行提交导致合并冲突   要把合并失败的文件手动编辑为我们希望的内容 再提交
+存储当前工作状态
+    git stash    
+恢复当前工作状态并删除stash
+    git stash pop     或者 git stash apply 和 git stash drop 2个命令共同实现
+查看工作存放
+    git stash list 
+
+    
+    
