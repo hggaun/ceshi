@@ -16,3 +16,5 @@
 删除远程库(添加时地址错误/删库) ---- 只是解除本地与远程的绑定关系
     查看远程库信息         git remote -v
     删除远程库            git remote rm origin(远程库名)
+克隆远程库
+    git clone  远程库的地址  http/ssh
