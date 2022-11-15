@@ -56,3 +56,16 @@ fast forward模式
 多人协作
     先试图用git push origin 分支推送自己的修改  若失败则git pull提取最新的提交  在git push  若git pull时出现no tracking information 则建立本地分支与远程分支的链接  
     git branch --set-upstream-to branch-name origin/ branch-name
+    
+创建标签
+    git tab 标签名  
+查看标签对应的标签信息
+    git show 标签名 
+推送本地标签
+    git push origin 本地标签
+推送全部未推送过的本地标签
+    git push origin --tags
+删除本地标签
+    git tag -d 标签
+删除一个远程标签
+    git push origin :refs/tags/远程标签
