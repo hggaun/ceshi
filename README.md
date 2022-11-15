@@ -54,7 +54,7 @@ fast forward模式
     git pull        下载远端内容并进行一次git merge命令  为下载的远端内容创建一次merge commit
                     若无法抓取则需要建立分支与远程分支的链接   git branch --set-upstream-to=origin/dev dev
 远程下载到本地仓库中
-    git fetch       下载好远端的内容但不会更新本地仓库的版本状态
+    git fetch   远程分支      下载好远端的内容但不会更新本地仓库的版本状态
 
 多人协作
     先试图用git push origin 分支推送自己的修改  若失败则git pull提取最新的提交  在git push  若git pull时出现no tracking information 则建立本地分支与远程分支的链接  
