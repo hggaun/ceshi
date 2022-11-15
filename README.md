@@ -20,6 +20,7 @@
     git clone  远程库的地址  http/ssh
 创建分支  
     git checkout -b 分支名      -b表示创建并切换  等同于 git branch 分支名 和 git checkout 分支名  2个命令             git swtich -c dev  
+    git checkout -b 分支名 origin/dev    创建远程origin的dev分支到本地
 查看分支    
     git branch   当前分支前会标一个 * 号
 切换分支
@@ -42,6 +43,16 @@ fast forward模式
     git stash pop     或者 git stash apply 和 git stash drop 2个命令共同实现
 查看工作存放
     git stash list 
-
+将一个提交过程转到另一个分支上进行提交
+    git cherry-pick  提交信息
+丢弃一个没有被合并过的分支
+    git branch -D 分支名   强行删除
+ 
+将分支推送到远程库中
+    git push origin 远程库分支(master/dev等)
+远程抓取分支
+    git pull      若无法抓取则需要建立分支与远程分支的链接   git branch --set-upstream-to=origin/dev dev
     
-    
+多人协作
+    先试图用git push origin 分支推送自己的修改  若失败则git pull提取最新的提交  在git push  若git pull时出现no tracking information 则建立本地分支与远程分支的链接  
+    git branch --set-upstream-to branch-name origin/ branch-name
